@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -2226,21 +2226,321 @@
             color: #fff;
         }
 
-        /* Responsive Breakpoints */
-        @media (max-width: 1200px) {
+        /* ==================== COMPREHENSIVE RESPONSIVE DESIGN ==================== */
+        @media (max-width: 1280px) {
             .jarvis-dashboard {
                 grid-template-columns: 240px 1fr 280px;
-                padding: 6px 20px 16px 20px;
+                padding: 8px 20px 16px 20px;
+                gap: 16px;
+            }
+            .jarvis-topbar {
+                padding: 14px 24px 10px 24px;
+            }
+            .topbar-hud-lines svg {
+                width: 220px;
             }
         }
 
-        @media (max-width: 992px) {
-            .jarvis-dashboard {
-                grid-template-columns: 1fr;
+        @media (max-width: 1024px) {
+            .jarvis-topbar {
+                padding: 12px 20px;
             }
-
             .topbar-hud-lines {
                 display: none;
+            }
+            .brand-subtitle {
+                display: none;
+            }
+            .jarvis-dashboard {
+                grid-template-columns: 1fr;
+                padding: 8px 16px 24px 16px;
+                gap: 18px;
+            }
+            /* Promote Center HUD (Core & Mic) to top priority on mobile & tablet */
+            .center-col {
+                order: 1;
+                width: 100%;
+            }
+            .quick-actions-col {
+                order: 2;
+                width: 100%;
+            }
+            .right-col {
+                order: 3;
+                width: 100%;
+            }
+            .actions-list {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+                gap: 10px;
+            }
+            .action-card:hover {
+                transform: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                overflow-x: hidden;
+            }
+            .jarvis-topbar {
+                padding: 10px 14px;
+            }
+            .arc-logo-ring {
+                width: 32px;
+                height: 32px;
+            }
+            .brand-title {
+                font-size: 1.25rem;
+                letter-spacing: 2px;
+            }
+            .clock-time {
+                font-size: 1.1rem;
+            }
+            .clock-date {
+                font-size: 0.68rem;
+            }
+            .btn-settings-gear {
+                width: 38px;
+                height: 38px;
+                border-radius: 10px;
+            }
+            .topbar-status {
+                gap: 12px;
+            }
+
+            .jarvis-dashboard {
+                padding: 6px 12px 24px 12px;
+                gap: 14px;
+            }
+
+            /* Responsive Holographic Stage & Viewport */
+            .holographic-stage {
+                height: 270px;
+                max-width: 100%;
+                width: 100%;
+            }
+            .viewport-card {
+                height: 250px;
+                max-width: 100%;
+                width: 100%;
+                border-radius: 16px;
+            }
+            .arc-reactor-core {
+                width: 210px;
+                height: 210px;
+            }
+            .reactor-outer-ring {
+                width: 200px;
+                height: 200px;
+            }
+            .reactor-middle-ring {
+                width: 160px;
+                height: 160px;
+            }
+            .reactor-inner-disc {
+                width: 110px;
+                height: 110px;
+            }
+            .reactor-text {
+                font-size: 1.15rem;
+                letter-spacing: 3px;
+            }
+            .pedestal-base {
+                width: 220px;
+                height: 28px;
+            }
+            .hologram-beam {
+                width: 220px;
+                height: 210px;
+            }
+
+            /* Nav switcher scrollable on small screens */
+            .center-mode-nav {
+                width: 100%;
+                max-width: 100%;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                justify-content: center;
+                gap: 4px;
+                padding: 4px;
+                border-radius: 20px;
+            }
+            .nav-tab {
+                padding: 6px 12px;
+                font-size: 0.74rem;
+                white-space: nowrap;
+            }
+
+            /* Floating Face ID Telemetry HUD */
+            .jarvis-face-hud {
+                padding: 4px 10px;
+                font-size: 0.72rem;
+            }
+            .jarvis-face-hud .jfh-name {
+                font-size: 0.74rem;
+            }
+
+            /* Waveform & Mic */
+            .waveform-row {
+                gap: 8px;
+            }
+            .wave-bars {
+                height: 26px;
+                gap: 2px;
+            }
+            .btn-center-mic {
+                width: 52px;
+                height: 52px;
+            }
+            .listening-status-text {
+                font-size: 0.78rem;
+            }
+
+            /* Bottom Input Pill */
+            .jarvis-input-pill {
+                width: 100%;
+                max-width: 100%;
+                height: 46px;
+                padding: 0 14px;
+                gap: 8px;
+            }
+            .pill-input {
+                font-size: 0.88rem;
+            }
+
+            /* Actions List in 2 columns on mobile */
+            .actions-list {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 8px;
+            }
+            .action-card {
+                padding: 9px 10px;
+                gap: 9px;
+                border-radius: 12px;
+            }
+            .action-icon-box {
+                width: 34px;
+                height: 34px;
+                font-size: 1rem;
+                border-radius: 8px;
+            }
+            .action-title {
+                font-size: 0.8rem;
+            }
+            .action-desc {
+                font-size: 0.66rem;
+            }
+
+            /* Right Column Cards */
+            .weather-card {
+                padding: 12px 14px;
+                border-radius: 14px;
+            }
+            .weather-sun-icon {
+                font-size: 1.8rem;
+            }
+            .weather-temp {
+                font-size: 1.6rem;
+            }
+            .system-info-card {
+                padding: 14px 12px;
+                border-radius: 14px;
+            }
+
+            /* WhatsApp Floating Dispatch Banner on mobile */
+            .wa-dispatch-banner {
+                left: 12px !important;
+                right: 12px !important;
+                bottom: 12px !important;
+                width: auto !important;
+                max-width: calc(100vw - 24px) !important;
+                padding: 14px 14px !important;
+                border-radius: 16px !important;
+            }
+            .wa-banner-actions {
+                flex-direction: column;
+                gap: 6px;
+            }
+            .wa-btn-action {
+                width: 100%;
+                text-align: center;
+                padding: 8px 10px;
+                font-size: 0.76rem;
+            }
+
+            /* Neural Settings Modal on mobile */
+            .neural-settings-box {
+                width: 95vw !important;
+                max-width: 95vw !important;
+                padding: 16px 14px !important;
+                max-height: 90vh !important;
+                border-radius: 16px !important;
+            }
+            .wa-contacts-grid {
+                grid-template-columns: 1fr !important;
+                gap: 10px !important;
+            }
+            .provider-input-wrap {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 6px;
+            }
+            .provider-input-wrap input {
+                width: 100%;
+            }
+            .provider-input-wrap button,
+            .provider-input-wrap a {
+                width: 100%;
+                text-align: center;
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 440px) {
+            .actions-list {
+                grid-template-columns: 1fr;
+            }
+            .brand-title {
+                font-size: 1.15rem;
+                letter-spacing: 1px;
+            }
+            .topbar-status {
+                gap: 8px;
+            }
+            .clock-time {
+                font-size: 1rem;
+            }
+            .btn-settings-gear {
+                width: 34px;
+                height: 34px;
+            }
+            .holographic-stage {
+                height: 240px;
+            }
+            .viewport-card {
+                height: 230px;
+            }
+            .arc-reactor-core {
+                width: 190px;
+                height: 190px;
+            }
+            .reactor-outer-ring {
+                width: 180px;
+                height: 180px;
+            }
+            .reactor-middle-ring {
+                width: 140px;
+                height: 140px;
+            }
+            .reactor-inner-disc {
+                width: 95px;
+                height: 95px;
+            }
+            .reactor-text {
+                font-size: 1rem;
+                letter-spacing: 2px;
             }
         }
     </style>
@@ -3186,7 +3486,7 @@
                     Set phone numbers with country code (e.g. 923001234567). Enables commands like "message to Baba: how
                     are you".
                 </p>
-                <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:8px;">
+                <div class="wa-contacts-grid" style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:8px;">
                     <div>
                         <label style="font-size:0.72rem; color:var(--accent-cyan); display:block; margin-bottom:4px;">👨
                             Baba / Papa</label>
