@@ -1,0 +1,29 @@
+# Dependencies & caches
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+
+# Build & OS files
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.github/
+
+# Backups & temp files
+*.bak
+backup/
+scratch/
+
+# Unrelated downloaded repos & files
+flybrain/
+awesome-free-llm-apis-main/
+.verify/
+scripts/
+contributing.md
+data.json
+free-llm-apis/
+media/
+/index.html
+license
